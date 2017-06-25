@@ -42,13 +42,16 @@ class XBind extends HTMLElement{
     var shadow= this.attachShadow({mode: 'open'});
     var div=document.createElement('div');
     var props=this.getAttribute('f-bind');
+    var classStyle=this.getAttribute('class');
+
     var list=this.dynamicBind(props);
 
-    div.appendChild(list);
+      list.className=classStyle;
+  //  div.appendChild(list);
 
     //  console.log(list);
 
-     shadow.appendChild(div);
+     shadow.appendChild(list);
   }
 
      dynamicBind(props){
@@ -60,7 +63,7 @@ class XBind extends HTMLElement{
         var ul=document.createElement('ul');
         var fora=undefined;
         for(const item of eval(props)){
-                    
+
             result +='<li>'+item+'</li>';
 
         }

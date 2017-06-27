@@ -15,8 +15,13 @@
   </head>
   <body>
       <h1 class="text-center">teste</h1>
-      <x-bind f-bind="data" class="btn btn-primary"></x-bind>
+      <form class="form-horizontal">
+      <div class="form-group" >
+        <select-options opt="data" class="form-control"></select-options>
 
+      </div>
+
+    </form>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="bootstrap/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -25,7 +30,8 @@
 
     <script>
         var data=['cachorro','gato','galinha'];
+
     </script>
-    <script src="index.js"></script>
+    <script src="componente-js.js"> </script>
   </body>
 </html>
